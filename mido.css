@@ -1,0 +1,118 @@
+.header-image {
+	border-radius: 20px;
+	margin-right: 5%;
+	margin-left: 5%;
+	width: 90%;
+}
+.article {
+	background-color: white;
+	margin :10px 20px;
+	padding: 5% 5%;
+	-webkit-box-shadow: 0px 1px 33px -5px rgba(245,17,55,1);
+	-moz-box-shadow: 0px 1px 33px -5px rgba(245,17,55,1);
+	box-shadow: 0px 1px 33px -5px rgba(245,17,55,1); 
+}
+.button  {
+	background-color:#000000;
+	border:1px solid #000000;
+	border-radius:10px;color:white;
+	display:inline-block;font-family:sans-serif;
+	font-size:15px;line-height:30px;
+	text-align:center;
+	text-decoration:none;width:250px;
+	-webkit-text-size-adjust:none;mso-hide:all;
+	border-radius: 18px;
+	border-width: 2px;
+	cursor:pointer;
+	text-transform: uppercase;
+}
+hr {
+	background-color: #FDC5CF;
+}
+@font-face {
+font-family: 'Myriad Pro Bold Condensed';
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Bold Condensed'), url('myriad/MYRIADPRO-BOLDCOND.woff') format('woff');
+}
+.titre_rouge {
+  font-size: 28.332px;
+  font-family: "Myriad Pro Bold Condensed",sans-serif;
+  color: #D1000D;
+  font-weight: bold;
+  line-height: 0.852;
+  text-align: center;
+
+}
+.centrer {
+	text-align: center;
+}
+.tableau {
+	margin-left: 30%;
+	margin-right: 30%;
+	width: auto;
+}
+.button  a:hover {
+	background-color:white;
+	border:1px solid #000000;
+	border-radius:10px;
+	color:#000000;
+	display:inline-block;
+	font-family:sans-serif;
+	font-size:15px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	width:250px;
+	-webkit-text-size-adjust:none;
+	mso-hide:all;
+	border-radius: 18px;
+	border-width: 2px;
+	text-transform: uppercase;
+}
+a {
+	text-decoration: none;
+}
+a.button:hover {
+	text-decoration: none;
+	color: white;
+}
+.logo {
+	margin-bottom: 5%;
+
+}
+.vl {
+  border-left: 1px solid white;
+  height: 150px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid red;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+	-webkit-box-shadow: 4px -3px 33px -4px rgb(253, 197, 207);
+	-moz-box-shadow: 4px -3px 33px -4px rgb(253, 197, 207);
+	box-shadow: 4px -3px 33px -4px rgb(253, 197, 207);
+	border: 1px solid rgb(253, 197, 207);
+}
+.texte {
+  font-size: 15px;
+  font-family: "Trebuchet MS";
+  color: rgb(0, 0, 0);
+  line-height: 1.137;
+  text-align: center;
+}
+label {
+	color: red;
+}
