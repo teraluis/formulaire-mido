@@ -4,6 +4,14 @@
 	margin-left: 5%;
 	width: 90%;
 }
+.article1 {
+	background-color: white;
+	margin :0px 20px;
+	padding: 2% 5%;
+	-webkit-box-shadow: 0px 1px 33px -5px rgba(245,17,55,1);
+	-moz-box-shadow: 0px 1px 33px -5px rgba(245,17,55,1);
+	box-shadow: 0px 1px 33px -5px rgba(245,17,55,1); 
+}
 .article {
 	background-color: white;
 	margin :10px 20px;
@@ -12,20 +20,7 @@
 	-moz-box-shadow: 0px 1px 33px -5px rgba(245,17,55,1);
 	box-shadow: 0px 1px 33px -5px rgba(245,17,55,1); 
 }
-.button  {
-	background-color:#000000;
-	border:1px solid #000000;
-	border-radius:10px;color:white;
-	display:inline-block;font-family:sans-serif;
-	font-size:15px;line-height:30px;
-	text-align:center;
-	text-decoration:none;width:250px;
-	-webkit-text-size-adjust:none;mso-hide:all;
-	border-radius: 18px;
-	border-width: 2px;
-	cursor:pointer;
-	text-transform: uppercase;
-}
+
 hr {
 	background-color: #FDC5CF;
 }
@@ -52,7 +47,23 @@ src: local('Myriad Pro Bold Condensed'), url('myriad/MYRIADPRO-BOLDCOND.woff') f
 	margin-right: 30%;
 	width: auto;
 }
-.button  a:hover {
+.button, a.button  {
+	background-color:#000000;
+	border:1px solid #000000;
+	border-radius:10px;color:white;
+	display:inline-block;font-family:sans-serif;
+	font-size:15px;line-height:30px;
+	text-align:center;
+	text-decoration:none;width:250px;
+	-webkit-text-size-adjust:none;mso-hide:all;
+	border-radius: 18px;
+	border-width: 2px;
+	cursor:pointer;
+	text-transform: uppercase;
+	color: white;
+}
+.button:hover {
+	text-decoration: none;
 	background-color:white;
 	border:1px solid #000000;
 	border-radius:10px;
@@ -73,10 +84,8 @@ src: local('Myriad Pro Bold Condensed'), url('myriad/MYRIADPRO-BOLDCOND.woff') f
 a {
 	text-decoration: none;
 }
-a.button:hover {
-	text-decoration: none;
-	color: white;
-}
+
+
 .logo {
 	margin-bottom: 5%;
 
@@ -115,4 +124,12 @@ a.button:hover {
 }
 label {
 	color: red;
+}
+h3 {
+	text-transform: uppercase;
+	color: red;
+}
+p {
+	font-size: 20px;
+	font-family: "Trebuchet MS";
 }
