@@ -80,8 +80,8 @@ var today = yyyy+"-"+mm+"-"+dd;
   }
   $("#enter").click(function(e){
     e.preventDefault();
-    if($("#nom").val()!="" 
-      && $("#prenom").val()!=""
+    if($("#nom").val().length>2 
+      && $("#prenom").val().length>2
       && $("#email").val()!=""
       && $("#phone").val()!="" 
       && $("#company").val()!=""
@@ -178,12 +178,14 @@ var today = yyyy+"-"+mm+"-"+dd;
     });
     $("input[name='nom']").blur(function verifNom(){
       
-      
-      if($(this).val().length<2){
+      let valid_nom= validateString($(this).val())==true;
+
+      if($(this).val().length<2 || valid_nom==false ){
+        $(this).attr("placeholder", "");
             $(this).css("background-color","red");
              $(this).css("color","white");
             $("#nom_aide").text("");
-            $("#nom_aide").text("name must not be empty and minimum 2 caracters");
+            $("#nom_aide").text("the name must not be empty, it must contain only uppercase or lowercase letters with a minimum of 2 characters");
 /*            $(this).next("#checkIcon").removeClass("fa-check");
             $(this).next("#checkIcon").addClass("fa-times-circle");*/
             
@@ -195,12 +197,14 @@ var today = yyyy+"-"+mm+"-"+dd;
     });
     $("input[name='prenom']").blur(function verifPrenom(){
       
-      
-      if($(this).val().length<2){
+      let valid_prenom= validateString($(this).val())==true;
+     
+      if($(this).val().length<2 || valid_prenom==false){
+            $(this).attr("placeholder", "");
             $(this).css("background-color","red");
-             $(this).css("color","white");
+            $(this).css("color","white");
             $("#prenom_aide").text("");
-            $("#prenom_aide").text("surname must not be empty and minimum 2 caracters");
+            $("#prenom_aide").text("the surname must not be empty, it must contain only uppercase or lowercase letters with a minimum of 2 characters");
 /*            $(this).next("#checkIcon").removeClass("fa-check");
             $(this).next("#checkIcon").addClass("fa-times-circle");*/
             
@@ -212,8 +216,9 @@ var today = yyyy+"-"+mm+"-"+dd;
     });
     $("input[name='phone']").blur(function verifPhone(){
       if($(this).val().length<8){
+        $(this).attr("placeholder", "");
             $(this).css("background-color","red");
-             $(this).css("color","white");
+            $(this).css("color","white");
             $("#phone_aide").text("");
             $("#phone_aide").text("surname must not be empty aAND MINIMUM 8 digits");
 /*            $(this).next("#checkIcon").removeClass("fa-check");
