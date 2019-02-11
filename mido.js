@@ -50,11 +50,14 @@ var today = yyyy+"-"+mm+"-"+dd;
             }           
           },
           complete: function () {
-
+            let chargement = document.getElementById("chargement");
+            chargement.style.display="none";
           },
           error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + " :: " + textStatus + " :: " + errorThrown);
             $("#succees").hide();
+            let chargement = document.getElementById("chargement");
+            chargement.style.display="none";
             let echec = document.getElementById("echec");
             echec.style.display="block";
             let succees = document.getElementById("succees");
@@ -64,7 +67,7 @@ var today = yyyy+"-"+mm+"-"+dd;
       });
   }
   function validateEmail(candidate){
-    let emailRegex = new RegExp("^[0-9a-zA-Z._-]+@[0-9a-zA-Z]{2,}\.[a-z]{2,6}$");
+    let emailRegex = new RegExp("^[0-9a-zA-Z._-éèàçù~^¨]+@[0-9a-zA-Z_éàù-]{2,}\.[- a-z_]{2,6}$");
     
     return emailRegex.test(candidate);
   }
@@ -74,7 +77,7 @@ var today = yyyy+"-"+mm+"-"+dd;
     return emailRegex.test(candidate);
   }
   function validateString(candidate){
-    let emailRegex = new RegExp("^[A-Za-z]+$");
+    let emailRegex = new RegExp("^[A-Za-z éèà-çù~_\w+-]+$");
     
     return emailRegex.test(candidate);
   }
