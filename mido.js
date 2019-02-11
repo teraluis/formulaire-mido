@@ -67,7 +67,7 @@ var today = yyyy+"-"+mm+"-"+dd;
       });
   }
   function validateEmail(candidate){
-    let emailRegex = new RegExp("^[0-9a-zA-Z._-éèàçù~^¨]+@[0-9a-zA-Z_éàù-]{2,}\.[- a-z_]{2,6}$");
+    let emailRegex = new RegExp("^[0-9a-zA-Z._-éèàçù~^¨-]+@[0-9a-zA-Z_éàù-]{2,}\.[- a-z_]{2,6}$",'i');
     
     return emailRegex.test(candidate);
   }
@@ -77,8 +77,8 @@ var today = yyyy+"-"+mm+"-"+dd;
     return emailRegex.test(candidate);
   }
   function validateString(candidate){
-    let emailRegex = new RegExp("^[A-Za-z éèà-çù~_\w+-]+$");
-    
+    let emailRegex = new RegExp("^([A-Za-z éèà-çù~_+-]+)*$",'i');
+    console.log(emailRegex.test(candidate));
     return emailRegex.test(candidate);
   }
   $("#enter").click(function(e){
